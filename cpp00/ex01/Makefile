@@ -1,10 +1,12 @@
-NAME = megaphone
+NAME = PhoneBook
 
 SRC_DIR = .
 
 OBJ_DIR = .objs
 
-SRC =	$(SRC_DIR)/megaphone.cpp 
+SRC =	$(SRC_DIR)/main.cpp \
+		$(SRC_DIR)/PhoneBook.cpp \
+		$(SRC_DIR)/Contact.cpp
 
 OBJ = $(patsubst $(SRC_DIR)%.c, $(OBJ_DIR)%.o, $(SRC))
 
