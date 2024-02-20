@@ -6,7 +6,7 @@
 /*   By: gvardaki <gvardaki@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 14:41:17 by gvardaki          #+#    #+#             */
-/*   Updated: 2024/02/19 16:34:41 by gvardaki         ###   ########.fr       */
+/*   Updated: 2024/02/20 10:02:47 by gvardaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ public:
 
     // Public member functions
     void set_var(std::string var, std::string value);
+	std::string show_var(std::string var) const;
     
 private:
     // Private member variables

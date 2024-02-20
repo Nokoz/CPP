@@ -6,7 +6,7 @@
 /*   By: gvardaki <gvardaki@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 14:36:08 by gvardaki          #+#    #+#             */
-/*   Updated: 2024/02/19 16:34:21 by gvardaki         ###   ########.fr       */
+/*   Updated: 2024/02/20 15:49:04 by gvardaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,9 @@
 
 // Includes
 # include <iostream>
+# include <iomanip>
+//# include <string>
+//# include <cstring>
 # include "Contact.hpp"
 
 // Class declaration
@@ -28,8 +31,12 @@ class PhoneBook {
 
 		int	index;
 		// Public member functions
-		void menu();
+		void menu(void);
+		void contact_header(void) const;
 		void add(int index);
+		void show_contact(void) const;
+		void search_contact(void);
+		void contact_details(int i) const;
 
 	private:
 		// Private member variables
