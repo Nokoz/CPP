@@ -1,29 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gvardaki <gvardaki@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/21 09:08:42 by gvardaki          #+#    #+#             */
-/*   Updated: 2024/02/21 13:40:53 by gvardaki         ###   ########.fr       */
+/*   Created: 2024/02/21 13:03:50 by gvardaki          #+#    #+#             */
+/*   Updated: 2024/02/21 13:38:18 by gvardaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "zombie.h"
+#include "Zombie.hpp"
 
-//Constructor
-Zombie::Zombie(std::string name) : _name(name) {
-//	this->_name = name;
-	return ;
-}
+int	main(int ac, char **av) {
+	int 		size = 0;
+	std::string	name;
+	Zombie		*horde;
 
-//Desturctor
-Zombie::~Zombie(void){
-	std::clog << this->_name << " destoyed" << std::endl;
-	return ;
-}
-
-void Zombie::announce(void) const{
-	std::cout << this->_name << ":  BraiiiiiiinnnzzzZ..." << std::endl;
+	if (ac != 3) {
+		std::cout << "Usage : ./horde [size] [name]" << std::endl;
+		exit(1);
+	}
+	size = atoi(av[1]);
+	name = av[2];
+	horde = zombieHorde(size, name);
+	for (int i = 0 ; i < size ; i++) {
+		horde[i].announce();
+	}
+	delete[] horde;
+	return (0);
 }
