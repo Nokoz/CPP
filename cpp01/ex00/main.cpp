@@ -6,16 +6,16 @@
 /*   By: gvardaki <gvardaki@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/21 10:17:02 by gvardaki          #+#    #+#             */
-/*   Updated: 2024/02/21 11:11:20 by gvardaki         ###   ########.fr       */
+/*   Updated: 2024/02/21 11:44:29 by gvardaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "zombie.h"
 
 int	main(int ac, char **av){
-	std::string	name;
-	Zombie		*named;
 	Zombie		*heap;
+	Zombie		*named;
+	std::string	name;
 
 	if (ac > 1){
 		name = av[1];
@@ -25,8 +25,8 @@ int	main(int ac, char **av){
 		exit(0);
 	}
 	heap = newZombie("heap");
-	randomChump("stack");
 	heap->announce();
+	randomChump("stack");
 	delete heap;
 
 	return (0);
