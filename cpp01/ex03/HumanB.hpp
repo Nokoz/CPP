@@ -6,7 +6,7 @@
 /*   By: gvardaki <gvardaki@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/26 09:49:16 by gvardaki          #+#    #+#             */
-/*   Updated: 2024/02/26 10:52:10 by gvardaki         ###   ########.fr       */
+/*   Updated: 2024/02/26 11:47:32 by gvardaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,19 +22,19 @@ class HumanB {
 	public:
 		// Constructors
 		HumanB(const std::string name);
-		HumanB(const std::string name, Weapon *w);
+		HumanB(const std::string name, Weapon* w);
 		// Destructor
 		~HumanB(void);
 
 		// Public member functions
 		const std::string& get_name(void) const;
 		void attack(void);
-		void setWeapon(Weapon *w);
+		void setWeapon(Weapon& w);
 
 	private:
 		// Private member variables
 		std::string _name;
-		Weapon&		_weapon;
+		Weapon*		_weapon;
 
 };
 

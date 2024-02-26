@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanA.cpp                                         :+:      :+:    :+:   */
+/*   HumanB.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gvardaki <gvardaki@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/26 10:19:05 by gvardaki          #+#    #+#             */
-/*   Updated: 2024/02/26 10:49:38 by gvardaki         ###   ########.fr       */
+/*   Updated: 2024/02/26 11:51:34 by gvardaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "HumanA.hpp"
+#include "HumanB.hpp"
 
 //Constructor
 HumanB::HumanB(const std::string name) : _name(name) {
@@ -18,7 +18,7 @@ HumanB::HumanB(const std::string name) : _name(name) {
 	return ;
 }
 
-HumanB::HumanB(const std::string name, Weapon* w) : _name(name), _weapon(w) {
+HumanB::HumanB(const std::string name, Weapon *w) : _name(name), _weapon(w) {
 
 	return ;
 }
@@ -36,4 +36,8 @@ void HumanB::attack(void) {
 
 const std::string&	HumanB::get_name(void) const {
 	return (this->_name);
+}
+
+void HumanB::setWeapon(Weapon &w) {
+	this->_weapon = &w;
 }
