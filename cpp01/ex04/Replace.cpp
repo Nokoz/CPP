@@ -6,7 +6,7 @@
 /*   By: gvardaki <gvardaki@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/26 12:48:25 by gvardaki          #+#    #+#             */
-/*   Updated: 2024/02/26 15:29:29 by gvardaki         ###   ########.fr       */
+/*   Updated: 2024/02/26 15:54:09 by gvardaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,13 @@
 //Constructor
 Replace::Replace(void){
 
-	return();
+	return;
 }
 
 //Desturctor
 Replace::~Replace(void){
 
-	return();
+	return;
 }
 
 std::string Replace::ft_replace(std::string content, std::string s1, std::string s2) {
@@ -33,7 +33,7 @@ std::string Replace::ft_replace(std::string content, std::string s1, std::string
 	while (i != std::string::npos)
 	{
 		content.erase(i, s1.size());
-		content.insert(i s2);
+		content.insert(i, s2);
 		i = content.find(s1);
 	}
 	return (content);

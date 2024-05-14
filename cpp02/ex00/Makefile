@@ -1,11 +1,12 @@
-NAME = Replace
+NAME = Fixed
 
 SRC_DIR = .
 
 OBJ_DIR = .objs
 
 SRC =	$(SRC_DIR)/main.cpp \
-		$(SRC_DIR)/Replace.cpp
+		$(SRC_DIR)/Fixed.cpp
+		
 
 OBJ = $(patsubst $(SRC_DIR)%.c, $(OBJ_DIR)%.o, $(SRC))
 

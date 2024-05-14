@@ -6,7 +6,7 @@
 /*   By: gvardaki <gvardaki@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 08:58:17 by gvardaki          #+#    #+#             */
-/*   Updated: 2024/02/27 09:49:13 by gvardaki         ###   ########.fr       */
+/*   Updated: 2024/05/09 12:00:01 by gvardaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ void	Harl::error(void) {
 }
 
 void	Harl::complain(std::string level) {
+
 //Pointer declaration
 	void (Harl::*debug)();
 	void (Harl::*info)();

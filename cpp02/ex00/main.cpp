@@ -5,30 +5,22 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: gvardaki <gvardaki@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/21 13:03:50 by gvardaki          #+#    #+#             */
-/*   Updated: 2024/05/09 11:40:13 by gvardaki         ###   ########.fr       */
+/*   Created: 2024/05/10 10:49:13 by gvardaki          #+#    #+#             */
+/*   Updated: 2024/05/13 12:39:51 by gvardaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include "Zombie.hpp"
+#include <iostream>
+#include "Fixed.hpp"
 
-int	main(int ac, char **av) {
-	int 		size = 0;
-	std::string	name;
-	Zombie		*horde;
+int	main( void ) {
+	Fixed a;
+	Fixed b( a );
+	Fixed c;
 
-	if (ac != 3) {
-		std::cout << "Usage : ./horde [size] [name]" << std::endl;
-		exit(1);
-	}
-	size = atoi(av[1]);
-	name = av[2];
-	horde = zombieHorde(size, name);
-	for (int i = 0 ; i < size ; i++) {
-		horde[i].announce();
-	}
-	delete[] horde;
-	sleep(15);
+	c = b;
+	std::cout << a.getRawBits() << std::endl;
+	std::cout << b.getRawBits() << std::endl;
+	std::cout << c.getRawBits() << std::endl;
 	return (0);
 }
