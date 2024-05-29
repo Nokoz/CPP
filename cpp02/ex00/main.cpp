@@ -6,7 +6,7 @@
 /*   By: gvardaki <gvardaki@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/10 10:49:13 by gvardaki          #+#    #+#             */
-/*   Updated: 2024/05/13 12:39:51 by gvardaki         ###   ########.fr       */
+/*   Updated: 2024/05/27 11:17:31 by gvardaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ int	main( void ) {
 	c = b;
 	std::cout << a.getRawBits() << std::endl;
 	std::cout << b.getRawBits() << std::endl;
+	std::cout << c.getRawBits() << std::endl;
+	c.setRawBits(42);
 	std::cout << c.getRawBits() << std::endl;
 	return (0);
 }
