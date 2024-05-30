@@ -5,7 +5,8 @@ SRC_DIR = .
 OBJ_DIR = .objs
 
 SRC =	$(SRC_DIR)/main.cpp \
-		$(SRC_DIR)/ClapTrap.cpp
+		$(SRC_DIR)/ClapTrap.cpp \
+		$(SRC_DIR)/Utils.cpp
 		
 
 OBJ = $(patsubst $(SRC_DIR)%.c, $(OBJ_DIR)%.o, $(SRC))

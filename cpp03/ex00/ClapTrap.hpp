@@ -6,7 +6,7 @@
 /*   By: gvardaki <gvardaki@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/29 11:31:02 by gvardaki          #+#    #+#             */
-/*   Updated: 2024/05/29 12:28:38 by gvardaki         ###   ########.fr       */
+/*   Updated: 2024/05/30 11:28:15 by gvardaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 // Includes
 # include <iostream>
+#include <unistd.h>
 
 // Class declaration
 class ClapTrap {
@@ -24,19 +25,22 @@ class ClapTrap {
 		ClapTrap(const std::string& name);
 		ClapTrap(const ClapTrap& other);
 		// Operators
-		ClapTrap& operator=(const ClapTrap& other);
-		std::ostream &operator<<(std::ostream &o, ClapTrap const &i);	
+		ClapTrap& operator=(ClapTrap const &other);
 		// Destructor
 		~ClapTrap(void);
 
 		// Public member functions
-		std::string		getName(void);
-		unsigned int	getHp(void);
-		unsigned int	getEnergy(void);
-		unsigned int	getDmg(void);
-		void 			attack(const std::string& target);
+		std::string		getName(void) const;
+		unsigned int	getHp(void) const;
+		unsigned int	getEnergy(void) const;
+		unsigned int	getDmg(void) const;
+		void			setDmg(unsigned int amount);
+		bool			attack(const std::string& target);
 		void 			takeDamage(unsigned int amount);
 		void 			beRepaired(unsigned int amount);
+		bool 			isAlive(void);
+		bool			consumeEnergy(void);
+		void 			takesWeapon(void);
 
 	private:
 		// Private member variables
@@ -46,5 +50,8 @@ class ClapTrap {
 		unsigned int	_dmg;
 
 };
+std::ostream &operator<<(std::ostream &os, ClapTrap const &c);	
+
+int ft_gen_rand(const unsigned int range, const unsigned int offset);
 
 #endif // ClapTrap_HPP
