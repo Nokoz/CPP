@@ -6,7 +6,7 @@
 /*   By: gvardaki <gvardaki@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/30 12:27:41 by gvardaki          #+#    #+#             */
-/*   Updated: 2024/05/30 12:41:35 by gvardaki         ###   ########.fr       */
+/*   Updated: 2024/06/03 15:02:05 by gvardaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ class ScavTrap : public ClapTrap {
 
 		// Public member functions
 		void guardGate(void);
+		bool attack(const std::string &target);
 
 };
 
