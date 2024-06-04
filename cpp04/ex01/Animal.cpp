@@ -6,7 +6,7 @@
 /*   By: gvardaki <gvardaki@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 08:55:18 by gvardaki          #+#    #+#             */
-/*   Updated: 2024/06/04 11:31:32 by gvardaki         ###   ########.fr       */
+/*   Updated: 2024/06/04 11:33:06 by gvardaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ Animal::Animal(const Animal& other) : _type(other._type) {
 
 //Operator
 Animal& Animal::operator=(const Animal& other) {
-	if (this !=&other)
+	if (this != &other)
 		this->_type = other._type;
 	return *this;
 }
